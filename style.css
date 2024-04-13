@@ -1,0 +1,255 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .bold{
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+  }
+  
+  .container{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .cigsPerDayContainer select{
+    padding: 10px 30px 10px 30px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-position: right 10px top 50%, 0, 0;
+    background-size: 12px auto, 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  #daysInput, #costInput{
+    padding: 10px 30px 10px 30px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid #dedede;
+    margin: 0;
+  }
+  #daysInput{
+    width: 16rem;
+  }
+  
+  input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      -webkit-appearance: none;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+  
+  #btn, #clearBTN{
+    margin-top: .5rem;
+    color: white;
+    background-color: rgba(12, 143, 82, 0.589);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  #btn:hover, #clearBTN:hover{
+    background-color: rgba(12, 143, 82, 0.342);
+  }
+  
+  select:focus, button:focus, input:focus {
+    outline: 0;
+  }
+  
+  .fa-smoking-ban{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-content: flex-start;
+    color: rgb(238, 0, 0);
+  }
+  
+  .results{
+    max-width: 1000px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  .how-long{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dotted #dedede;
+  }
+  
+  
+  .savedAndCigarettesConatiner{
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  }
+  
+  .moneyContainer, .numberContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-top: 1rem;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  
+  .moneyContainer{
+    border-right: 1px dotted #dedede;
+  }
+  
+  .fa-dollar-sign, .fa-hashtag{
+    justify-content: center;
+    align-self: center;
+    margin: 1rem;
+  }
+  
+  .moneySaved{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .numberCigs{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  }
+  
+  
+  /* mobile */
+  @media(max-width: 600px){
+    .container{
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .fa-smoking-ban{
+      font-size: 9rem;
+      margin-top: 2rem;
+    }
+    .input-container{
+      display: flex;
+      flex-direction: column;
+    }
+    .results{
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+    }
+    #btn{
+      margin-top: 1.2rem;
+    }
+    .how-long{
+      display: flex;
+      text-align: center;
+      width: 160px;
+      flex-direction: column;
+    }
+    .savedAndCigarettesConatiner{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .moneyContainer{
+      width: 160px;
+      align-self: center;
+      text-align: center;
+      border-right: none;
+      border-bottom: 1px dotted #dedede;
+    }
+    .numberContainer{
+      width: 160px;
+      align-self: center;
+      text-align: center;
+    }
+    #daysInput{
+      width: 12rem;
+    }
+  }
+  
+  @media(max-width: 768px) {
+    .container{
+      box-shadow: none;
+    }
+    .results{
+      box-shadow: none;
+      margin-top: 2rem;
+    }
+    .numberContainer, .moneyContainer{
+      text-align: center;
+    }
+    .moneyContainer{
+      border-right: none;
+      border-bottom: 1px dotted #dedede;
+    }
+    .savedAndCigarettesConatiner{
+      display: flex;
+      flex-direction: column;
+    }
+    #daysInput{
+      width: 12rem;
+    }
+  }
+  
+  @media(max-width: 1024px){
+    .container{
+      box-shadow: none;
+    }
+    .results{
+      box-shadow: none;
+      margin-top: 2rem;
+    }
+    #daysInput{
+      width: 12rem;
+    }
+  }
